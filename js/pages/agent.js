@@ -1,4 +1,4 @@
-/* TYPE X — Agent Mode page (#/agent).
+/* CLINT X — Agent Mode page (#/agent).
    One instruction -> the agent runs the whole conversation loop:
    send -> wait -> on reply, generate a contextual reply -> send -> repeat.
    Polling runs client-side every 15s while this page is open (v1).
@@ -182,7 +182,7 @@
     const card = T.el(
       '<div class="approval-card">' +
         '<div class="ap-head">' + T.icon('shield','ic-sm') +
-        ' <b>Type X prepared this reply.</b><span class="ap-tag">needs approval</span></div>' +
+        ' <b>Clint X prepared this reply.</b><span class="ap-tag">needs approval</span></div>' +
         '<div class="ap-text"></div>' +
         '<textarea class="textarea ap-edit" rows="3" style="display:none"></textarea>' +
         '<div class="btn-row" style="margin-top:10px">' +

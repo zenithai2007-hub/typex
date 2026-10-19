@@ -1,4 +1,4 @@
-/* TYPE X — localStorage persistence + seed data. */
+/* CLINT X — localStorage persistence + seed data. */
 (function(){
   const T = window.TypeX;
   const P = 'typex_';
@@ -76,26 +76,26 @@
     return [
       {id:'lead-1', name:'Sarah Mitchell', platform:'LinkedIn', context:'Marketing manager at a DTC skincare brand; posted about needing help with email campaigns.',
        status:'Replied', lastContact: now-1*d, nextFollowUp: now+1*d,
-       message:'Hi Sarah, I noticed your post about scaling your email campaigns — that is exactly where TYPE X helps teams like yours. It drafts on-brand emails in your voice in seconds. Would a quick 10-minute demo be useful this week?'},
+       message:'Hi Sarah, I noticed your post about scaling your email campaigns — that is exactly where CLINT X helps teams like yours. It drafts on-brand emails in your voice in seconds. Would a quick 10-minute demo be useful this week?'},
       {id:'lead-2', name:'David Okafor', platform:'Upwork', context:'Startup founder hiring for customer-support copy; job post mentions slow response times.',
        status:'Draft Ready', lastContact: now-2*d, nextFollowUp: now+1*d,
-       message:'Hi David, I saw your post about improving support response times. TYPE X drafts accurate, friendly replies from your own knowledge base so your team answers in seconds, not hours. Open to a short walkthrough?'},
+       message:'Hi David, I saw your post about improving support response times. CLINT X drafts accurate, friendly replies from your own knowledge base so your team answers in seconds, not hours. Open to a short walkthrough?'},
       {id:'lead-3', name:'Amelia Hart', platform:'Email', context:'Real-estate agent; wants faster follow-ups with new listings.',
        status:'Sent', lastContact: now-3*d, nextFollowUp: now+2*d,
-       message:'Hi Amelia, new listings move fast — TYPE X helps you send polished, personal follow-ups the moment a lead comes in. Happy to show you how it works on your actual listings.'},
+       message:'Hi Amelia, new listings move fast — CLINT X helps you send polished, personal follow-ups the moment a lead comes in. Happy to show you how it works on your actual listings.'},
       {id:'lead-4', name:'Jonas Weber', platform:'LinkedIn', context:'SaaS sales lead; team writes 50+ outreach messages daily.',
        status:'New', lastContact: null, nextFollowUp: now+1*d, message:''},
       {id:'lead-5', name:'Priya Nair', platform:'Instagram', context:'Content creator; struggles with captions in two languages.',
        status:'Analyzing', lastContact: null, nextFollowUp: now+2*d, message:''},
       {id:'lead-6', name:'Marcus Chen', platform:'Email', context:'Recruiter; needs personalized outreach at scale without sounding robotic.',
        status:'Approved', lastContact: now-1*d, nextFollowUp: now+1*d,
-       message:'Hi Marcus, personalized outreach at scale is a tough balance. TYPE X writes each message around the candidate\u2019s actual background, so nothing sounds templated. Worth a 10-minute look?'},
+       message:'Hi Marcus, personalized outreach at scale is a tough balance. CLINT X writes each message around the candidate\u2019s actual background, so nothing sounds templated. Worth a 10-minute look?'},
       {id:'lead-7', name:'Elena Petrova', platform:'Fiverr', context:'Freelance designer; wants better client proposals.',
        status:'Follow-up', lastContact: now-6*d, nextFollowUp: now,
-       message:'Hi Elena, just following up — TYPE X can turn your past wins into sharp, persuasive proposals in minutes. Still interested in seeing it on your own projects?'},
+       message:'Hi Elena, just following up — CLINT X can turn your past wins into sharp, persuasive proposals in minutes. Still interested in seeing it on your own projects?'},
       {id:'lead-8', name:'Tom Becker', platform:'LinkedIn', context:'Support lead at a mid-size retailer; evaluating AI tools this quarter.',
        status:'Completed', lastContact: now-9*d, nextFollowUp: null,
-       message:'Hi Tom, thanks for the chat — as discussed, TYPE X plugs into your support workflow and drafts replies your agents approve in one click. Sharing the trial link as promised.'}
+       message:'Hi Tom, thanks for the chat — as discussed, CLINT X plugs into your support workflow and drafts replies your agents approve in one click. Sharing the trial link as promised.'}
     ];
   }
 
@@ -105,7 +105,7 @@
        steps:[
          {type:'trigger', title:'New message detected', desc:'Watches the connected inbox for new relevant messages.'},
          {type:'condition', title:'Matches criteria', desc:'From a lead or customer, not spam or auto-reply.'},
-         {type:'ai', title:'Analyze with TYPE X', desc:'Understands intent, context and the right tone.'},
+         {type:'ai', title:'Analyze with CLINT X', desc:'Understands intent, context and the right tone.'},
          {type:'output', title:'Generate personalized output', desc:'Drafts the reply in your saved writing style.'},
          {type:'approval', title:'Require approval', desc:'You review and approve before anything goes out.'},
          {type:'action', title:'Type / send', desc:'Sends via the connected channel, or assisted mode.'}

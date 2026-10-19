@@ -1,4 +1,4 @@
-/* TYPE X — AI provider: local (simulated). Genuinely works offline.
+/* CLINT X — AI provider: local (simulated). Genuinely works offline.
    Implements: TypeX.aiProviders.local = { name:'local', generate(opts) }
    opts: { instruction, contextText, style{tone,language,length,format}, signal, onToken }
    signal: { cancelled:boolean }. Returns Promise<string> (full text).
@@ -97,7 +97,7 @@
       email:['{t} ke baare mein ek zaroori update share karna chahta hoon.','Sab kuch schedule par hai, aur {team} aap ko next steps se agah rakhenge.','Agar {t} ke baare mein koi sawal ho to zaroor batayen.'],
       reply:['Rabta karne ka shukriya. {t} ke hawale se yeh confirm kar sakta hoon.','Hum ne is par ghor kiya hai aur behtareen rasta wazeh hai.','Agar {t} ke baare mein kuch aur wazeh karna ho to batayen, foran hal kar dunga.'],
       message:['{t} par ek quick note — mere khayal mein is ka ek smart hal hai.','Aage barhne se pehle aap ki raye darkar hai.','Agar chahen to hum call par bhi baat kar sakte hain.'],
-      caption:['POV: {t} ab samajh aa gaya.','Ise save kar len — baad mein kaam ayega.','Chote steps, bare results. #TypeX #Productivity'],
+      caption:['POV: {t} ab samajh aa gaya.','Ise save kar len — baad mein kaam ayega.','Chote steps, bare results. #ClintX #Productivity'],
       summary:['{t} ki asal baat teen cheezon par hai: wazeh hona, sahi waqt, aur follow-through.','Zyada tar value pehle faisle mein hai — woh durust karen, baqi khud ho jayega.','Khulasa: {t} par is hafte amal karen, agle quarter mein nahi.'],
       proposal:['Yeh proposal {t} ko mukammal cover karta hai: scope, timeline aur pricing.','Hum wazeh milestones mein deliver karenge taake aap ko hamesha maloom ho kaam kahan hai.','Maqsad simple hai — pehle 30 din mein {t} se measurable results.'],
       ideas:['Pehla angle: {t} ko before/after story banayen.','Dusra angle: woh ek sawal jo sab {t} ke baare mein poochte hain.','Teesra angle: {t} ko ek short checklist banayen jo log save karen.'],
@@ -109,7 +109,7 @@
       email:['{t} کے بارے میں ایک ضروری اپ ڈیٹ شیئر کرنا چاہتا ہوں۔','سب کچھ شیڈول پر ہے، اور {team} آپ کو اگلے مراحل سے آگاہ رکھیں گے۔','اگر {t} کے بارے میں کوئی سوال ہو تو ضرور بتائیں۔'],
       reply:['رابطہ کرنے کا شکریہ۔ {t} کے حوالے سے یہ کنفرم کر سکتا ہوں۔','ہم نے اس پر غور کیا ہے اور بہترین راستہ واضح ہے۔','اگر {t} کے بارے میں کچھ مزید واضح کرنا ہو تو بتائیں، فوراً حل کر دوں گا۔'],
       message:['{t} پر ایک مختصر نوٹ — میرے خیال میں اس کا ایک اچھا حل ہے۔','آگے بڑھنے سے پہلے آپ کی رائے درکار ہے۔','اگر چاہیں تو ہم کال پر بھی بات کر سکتے ہیں۔'],
-      caption:['{t} اب سمجھ آ گیا۔','اسے سیو کر لیں — بعد میں کام آئے گا۔','چھوٹے قدم، بڑے نتائج۔ #TypeX'],
+      caption:['{t} اب سمجھ آ گیا۔','اسے سیو کر لیں — بعد میں کام آئے گا۔','چھوٹے قدم، بڑے نتائج۔ #ClintX'],
       summary:['{t} کی اصل بات تین چیزوں پر ہے: وضاحت، صحیح وقت، اور فالو تھرو۔','زیادہ تر ویلیو پہلے فیصلے میں ہے۔','خلاصہ: {t} پر اس ہفتے عمل کریں۔'],
       proposal:['یہ پروپوزل {t} کو مکمل کور کرتا ہے: اسکوپ، ٹائم لائن اور پرائسنگ۔','ہم واضح مائیل اسٹونز میں ڈیلیور کریں گے۔','مقصد آسان ہے — پہلے 30 دن میں {t} سے ٹھوس نتائج۔'],
       ideas:['پہلا اینگل: {t} کو before/after کہانی بنائیں۔','دوسرا اینگل: وہ ایک سوال جو سب {t} کے بارے میں پوچھتے ہیں۔','تیسرا اینگل: {t} کی چیک لسٹ بنائیں جو لوگ سیو کریں۔'],
@@ -141,7 +141,7 @@
       caption:[
         'POV: ' + target + ' finally makes sense.',
         'Save this for later — ' + you + ' will thank yourself.',
-        'Small steps, big results. #TypeX #Productivity'
+        'Small steps, big results. #ClintX #Productivity'
       ],
       summary:[
         'The core of ' + target + ' comes down to three things: clarity, timing, and follow-through.',
@@ -220,11 +220,11 @@
       case 'Email': {
         const subj = target.length > 60 ? target.slice(0,57) + '...' : target;
         return 'Subject: ' + subj.charAt(0).toUpperCase() + subj.slice(1) + '\n\n' + open + '\n\n' +
-          lines.join('\n\n') + '\n\n' + close + '\nType X';
+          lines.join('\n\n') + '\n\n' + close + '\nClint X';
       }
-      case 'Social Media': return lines.join('\n\n') + '\n\n#TypeX #AI #Productivity';
+      case 'Social Media': return lines.join('\n\n') + '\n\n#ClintX #AI #Productivity';
       case 'Plain Text': return lines.join(' ');
-      default: return open + ' ' + lines.join(' ') + '\n\n' + close + '\nType X';
+      default: return open + ' ' + lines.join(' ') + '\n\n' + close + '\nClint X';
     }
   }
 
@@ -280,5 +280,5 @@
   }
 
   T.aiProviders = T.aiProviders || {};
-  T.aiProviders.local = { name:'local', label:'Type X Local Engine', generate, detectType };
+  T.aiProviders.local = { name:'local', label:'Clint X Local Engine', generate, detectType };
 })();

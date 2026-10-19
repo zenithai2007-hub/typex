@@ -1,4 +1,4 @@
-/* TYPE X — Saved Styles page: your voice, remembered. */
+/* CLINT X — Saved Styles page: your voice, remembered. */
 (function(){
   const T = window.TypeX;
 
@@ -47,7 +47,7 @@
       grid.innerHTML = T.ui.emptyState({
         icon: 'style',
         title: 'No styles yet.',
-        text: 'Save your writing style once and TYPE X will write like you, every time.',
+        text: 'Save your writing style once and CLINT X will write like you, every time.',
         actionLabel: 'CREATE YOUR FIRST STYLE'
       });
       const btn = grid.querySelector('[data-empty-action]');
@@ -178,7 +178,7 @@
     render(){
       return T.ui.pageHead(
         'Saved Styles',
-        'Your voice, remembered. Activate one and TYPE X writes like you.',
+        'Your voice, remembered. Activate one and CLINT X writes like you.',
         '<button class="btn btn-ai" id="sty-new">' + T.icon('plus', 'ic-sm') + ' New Style</button>'
       ) + '<div class="cards-grid" id="sty-grid"></div>';
     },

@@ -1,4 +1,4 @@
-# TYPE X — "Tell Type X what to do. Type X gets it done."
+# CLINT X — "Tell Clint X what to do. Clint X gets it done."
 
 A universal AI typing & execution agent. **v1 is a front-end demo**: a complete,
 production-quality static single-page app with a working local AI engine
@@ -27,7 +27,7 @@ The live deployment is on Vercel (static, zero config).
 - **Persistence** — history, templates, styles, leads, automations, settings
   all live in `localStorage`. Demo auth (login-first) is local-only.
 - **Approval gate** — external actions (TYPE OUTPUT / send) always show
-  "Type X prepared this action." with EDIT / APPROVE & TYPE / CANCEL while
+  "Clint X prepared this action." with EDIT / APPROVE & TYPE / CANCEL while
   *Require Approval Before External Actions* is ON (default).
 - **No voice anywhere** — keyboard/text input only, by design.
 - **No fake integrations** — restricted platforms are labeled ASSISTED MODE;
@@ -71,7 +71,7 @@ POST /api/send   Content-Type: application/json
    ```bash
    curl -X POST https://typex-zenithai2007-5539s-projects.vercel.app/api/send \
      -H 'Content-Type: application/json' \
-     -d '{"channel":"whatsapp","to":"<your-own-number>","message":"TYPE X test"}'
+     -d '{"channel":"whatsapp","to":"<your-own-number>","message":"CLINT X test"}'
    ```
    Test on your own number first. Before that works, the WhatsApp channel
    must be **connected and verified** in respond.io (trial ends 2026-10-20 —
@@ -99,7 +99,7 @@ approval card or auto-send → repeat.
   (clear warning label; sends without asking).
 - **Live thread**: sent/received bubbles; **activity log**: timestamped lines
   with PAUSE / RESUME / STOP (agent never acts while paused/stopped).
-- **Approval cards**: "Type X prepared this reply." + exact text +
+- **Approval cards**: "Clint X prepared this reply." + exact text +
   APPROVE & SEND / EDIT / SKIP.
 
 **Polling architecture (v1, honest)**: client-side `setInterval` every 15s

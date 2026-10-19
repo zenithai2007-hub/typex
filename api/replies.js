@@ -1,7 +1,7 @@
 'use strict';
 
 /* ============================================================================
-   TYPE X — inbound replies: GET /api/replies
+   CLINT X — inbound replies: GET /api/replies
    ----------------------------------------------------------------------------
    Polls respond.io for new inbound messages from one contact so the Agent
    Mode loop can detect replies and answer them.

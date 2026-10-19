@@ -7,18 +7,18 @@
 
   function finishAuth(name, email){
     T.store.set('user', { name: name, email: email, plan: 'Free plan', createdAt: Date.now() });
-    T.ui.toast('Welcome to TYPE X', 'success');
+    T.ui.toast('Welcome to CLINT X', 'success');
     T.router.navigate('app/workspace');
   }
 
   T.pages['auth-login'] = {
-    title: 'Log in to TYPE X',
+    title: 'Log in to CLINT X',
     render(){
       return `
 <div class="auth-wrap">
   <div class="auth-card card">
-    <a href="#/" class="brand brand-center" aria-label="TYPE X home">${T.brandImg('md')}</a>
-    <h1>Log in to TYPE X</h1>
+    <a href="#/" class="brand brand-center" aria-label="CLINT X home">${T.brandImg('md')}</a>
+    <h1>Log in to CLINT X</h1>
     <p class="sub">Welcome back. Your words are waiting.</p>
     <form id="login-form">
       <div class="field">
@@ -32,7 +32,7 @@
       <button type="submit" class="btn btn-ai btn-block">Log in</button>
       <button type="button" id="demo-login" class="btn btn-ghost btn-block">Continue as demo</button>
     </form>
-    <div class="auth-alt">New to TYPE X? <a href="#/signup">Create an account</a></div>
+    <div class="auth-alt">New to CLINT X? <a href="#/signup">Create an account</a></div>
     ${smallPrint()}
   </div>
 </div>`;
@@ -54,14 +54,14 @@
   };
 
   T.pages['auth-signup'] = {
-    title: 'Create your TYPE X account',
+    title: 'Create your CLINT X account',
     render(){
       return `
 <div class="auth-wrap">
   <div class="auth-card card">
-    <a href="#/" class="brand brand-center" aria-label="TYPE X home">${T.brandImg('md')}</a>
-    <h1>Create your TYPE X account</h1>
-    <p class="sub">Start typing. Type X does the rest.</p>
+    <a href="#/" class="brand brand-center" aria-label="CLINT X home">${T.brandImg('md')}</a>
+    <h1>Create your CLINT X account</h1>
+    <p class="sub">Start typing. Clint X does the rest.</p>
     <div class="auth-alt" style="margin-top:0">Already have an account? <a href="#/login">Log in</a></div>
     <form id="signup-form">
       <div class="field">

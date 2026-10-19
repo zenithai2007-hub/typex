@@ -1,5 +1,5 @@
 /* ============================================================
-   TYPE X — Design System (contract for all pages)
+   CLINT X — Design System (contract for all pages)
    Tokens: --bg #0B0714, --deep #160B2E, --purple #7C3AED,
    --purple-b #A855F7, --orange #FF7A18, --orange-b #FF9F43,
    --text #FFFFFF, --muted #A8A0B8
@@ -433,7 +433,7 @@ canvas.chart{width:100%;height:210px}
 .ctx{font-size:13px;color:var(--muted);white-space:pre-wrap}
 .toggle-ui{display:flex;align-items:center;gap:10px}
 
-/* ---------- Official TYPE X logo badge (dark-theme safe) ---------- */
+/* ---------- Official CLINT X logo badge (dark-theme safe) ---------- */
 .brand-badge{display:inline-flex;align-items:center;flex:none;background:#fff;border-radius:12px;padding:8px 14px;
   box-shadow:0 6px 24px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.07)}
 .brand-badge img{display:block;height:26px;width:auto;image-rendering:-webkit-optimize-contrast}

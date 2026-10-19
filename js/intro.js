@@ -1,4 +1,4 @@
-/* TYPE X — cinematic 3D intro (Three.js). Original animation, not a copy of any brand.
+/* CLINT X — cinematic 3D intro (Three.js). Original animation, not a copy of any brand.
    TypeX.intro.play(onDone)   — full ~3.4s cinematic for first visit
    TypeX.intro.quick(onDone)  — 0.9s logo transition for returning users
    Graceful fallback: if WebGL/THREE unavailable, calls onDone immediately.
@@ -39,8 +39,8 @@
       renderer.setSize(W, H);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-      const ov = T.el('<div class="intro-overlay"><div class="intro-word"><span class="brand-badge b-xl intro-logo"><img src="assets/logo.png" alt="TYPE X" draggable="false"></span>' +
-        '<p>Tell Type X what to do.</p></div>' +
+      const ov = T.el('<div class="intro-overlay"><div class="intro-word"><span class="brand-badge b-xl intro-logo"><img src="assets/clintx-logo.png" alt="CLINT X" draggable="false"></span>' +
+        '<p>Tell Clint X what to do.</p></div>' +
         '<button class="btn btn-ghost btn-sm skip-intro" style="display:none">Skip intro ' + T.icon('arrow-r','ic-sm') + '</button></div>');
       ov.insertBefore(renderer.domElement, ov.firstChild);
       root.appendChild(ov);

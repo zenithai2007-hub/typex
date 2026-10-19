@@ -1,4 +1,4 @@
-/* TYPE X — History page: everything TYPE X has done for you. */
+/* CLINT X — History page: everything CLINT X has done for you. */
 (function(){
   const T = window.TypeX;
 
@@ -148,7 +148,7 @@
       wrap.innerHTML = T.ui.emptyState({
         icon: 'history',
         title: 'No tasks yet.',
-        text: 'Tell Type X what you want to accomplish.',
+        text: 'Tell Clint X what you want to accomplish.',
         actionLabel: 'CREATE YOUR FIRST TASK'
       });
       const btn = wrap.querySelector('[data-empty-action]');
@@ -164,7 +164,7 @@
       seedIfNeeded();
       return T.ui.pageHead(
         'History',
-        'Everything TYPE X has done for you.',
+        'Everything CLINT X has done for you.',
         ''
       ) +
       '<div class="card card-pad" style="margin-bottom:16px"><div class="row">' +

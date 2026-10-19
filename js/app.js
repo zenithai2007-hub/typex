@@ -1,4 +1,4 @@
-/* TYPE X — boot. Intro -> router. Global shortcuts + helpers. */
+/* CLINT X — boot. Intro -> router. Global shortcuts + helpers. */
 (function(){
   const T = window.TypeX;
 

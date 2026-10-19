@@ -1,4 +1,4 @@
-/* TYPE X — Templates page: one-tap starting points for recurring work. */
+/* CLINT X — Templates page: one-tap starting points for recurring work. */
 (function(){
   const T = window.TypeX;
 

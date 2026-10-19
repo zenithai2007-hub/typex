@@ -1,4 +1,4 @@
-/* TYPE X — Analytics page.
+/* CLINT X — Analytics page.
    Vanilla canvas 2D charts: outputs per day, outreach funnel,
    most used styles, most used templates. */
 (function(){
@@ -184,7 +184,7 @@
     const u = getUsage();
     const allZero = !u.outputsGenerated && !u.messagesSent && !u.messagesPrepared &&
                     !u.tasksCompleted && !u.timeSavedMin && !u.replies;
-    const hint = allZero ? 'Charts light up as you use TYPE X.' : null;
+    const hint = allZero ? 'Charts light up as you use CLINT X.' : null;
     return '<div class="chart-grid">' +
       chartCard('ch-outputs', 'Outputs per day', hint) +
       chartCard('ch-funnel', 'Outreach performance', hint) +
@@ -264,7 +264,7 @@
   T.pages['analytics'] = {
     title:'Analytics',
     render(){
-      return T.ui.pageHead('Analytics', 'See what TYPE X is doing for you.', null) +
+      return T.ui.pageHead('Analytics', 'See what CLINT X is doing for you.', null) +
         '<div data-anx="stats"></div>' +
         '<div data-anx="charts"></div>' +
         '<div data-anx="note"></div>';

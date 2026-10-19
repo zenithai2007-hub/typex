@@ -1,4 +1,4 @@
-/* TYPE X — core utils. Defines window.TypeX namespace. */
+/* CLINT X — core utils. Defines window.TypeX namespace. */
 window.TypeX = window.TypeX || {};
 (function(){
   const T = window.TypeX;

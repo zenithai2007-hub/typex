@@ -1,5 +1,5 @@
-/* TYPE X — Automations page.
-   If this, then TYPE X. Automations never act silently:
+/* CLINT X — Automations page.
+   If this, then CLINT X. Automations never act silently:
    APPROVAL is on by default and every run is logged. */
 (function(){
   const T = window.TypeX;
@@ -45,7 +45,7 @@
     return [
       { type:'trigger',   title:'TRIGGER',  desc: trigger },
       { type:'condition', title:'CONDITION', desc: condition },
-      { type:'ai',        title:'AI ANALYSIS', desc:'Analyze with TYPE X' },
+      { type:'ai',        title:'AI ANALYSIS', desc:'Analyze with CLINT X' },
       { type:'output',    title:'OUTPUT',   desc:'Generate personalized output' },
       { type:'approval',  title:'APPROVAL', desc:'Require approval (recommended ON)' },
       { type:'action',    title:'ACTION',   desc: action }
@@ -101,7 +101,7 @@
     if (!autos.length){
       return T.ui.emptyState({
         icon:'bolt', title:'No automations yet',
-        text:'Build one to turn a repeatable pattern into a supervised flow: TYPE X drafts and proposes, you approve.',
+        text:'Build one to turn a repeatable pattern into a supervised flow: CLINT X drafts and proposes, you approve.',
         actionLabel:'+ New Automation', onAction: newAutomationModal
       });
     }
@@ -122,7 +122,7 @@
       '<div class="hint">Leave empty for the default: relevance and consent check.</div></div>' +
       '<div class="field"><div class="label">Action</div>' +
       '<select class="select" id="na-action">' + actOpts + '</select>' +
-      '<div class="hint">The approval step stays on — TYPE X never acts silently.</div></div>' +
+      '<div class="hint">The approval step stays on — CLINT X never acts silently.</div></div>' +
       '</div>'
     );
     T.ui.modal({
@@ -239,7 +239,7 @@
   T.pages['automations'] = {
     title:'Automations',
     render(){
-      return T.ui.pageHead('Automations', 'If this, then TYPE X.',
+      return T.ui.pageHead('Automations', 'If this, then CLINT X.',
         '<button class="btn btn-ai btn-sm" id="ax-new">' + T.icon('plus') +
         '<span>New Automation</span></button>') +
         '<div class="card card-pad">' +

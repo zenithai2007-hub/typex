@@ -1,4 +1,4 @@
-/* TYPE X — Settings page.
+/* CLINT X — Settings page.
    Account, AI preferences, toggles, keyboard, connections,
    security and a danger zone. All reads/writes go through
    T.store (keys: 'settings' -> typex_settings, 'user' -> typex_user). */
@@ -64,30 +64,30 @@
         '<div class="field"><label class="label">Email</label>' +
         '<input id="set-email" class="input" type="email" value="' + T.esc(u.email || '') + '" placeholder="you@example.com"></div>' +
         '<div class="set-row"><div><div class="t">Plan</div>' +
-        '<div class="d">Your current TYPE X plan.</div></div>' +
+        '<div class="d">Your current CLINT X plan.</div></div>' +
         '<span class="badge">Free plan</span></div>' +
         '<div style="margin-top:14px"><button class="btn btn-ai btn-sm" id="set-save-account">Save account</button></div>';
 
       const providerOptions =
-        '<option value="local"' + (s.provider === 'local' ? ' selected' : '') + '>Type X Local Engine (v1 demo)</option>' +
-        '<option value="cloud" disabled>Type X Cloud — Phase 2 (not connected)</option>';
+        '<option value="local"' + (s.provider === 'local' ? ' selected' : '') + '>Clint X Local Engine (v1 demo)</option>' +
+        '<option value="cloud" disabled>Clint X Cloud — Phase 2 (not connected)</option>';
 
       const aiInner =
         '<div class="field"><label class="label">AI provider</label>' +
         '<select id="set-provider" class="select">' + providerOptions + '</select>' +
         '<div class="hint">The local engine runs fully on your device. Cloud providers arrive in Phase 2.</div></div>' +
-        segField('Default tone', 'How TYPE X sounds when it writes for you.', 'set-tone', TONES, s.defaultTone) +
-        segField('Default language', 'Which language TYPE X answers in by default.', 'set-lang', LANGS, s.defaultLanguage) +
+        segField('Default tone', 'How CLINT X sounds when it writes for you.', 'set-tone', TONES, s.defaultTone) +
+        segField('Default language', 'Which language CLINT X answers in by default.', 'set-lang', LANGS, s.defaultLanguage) +
         segField('Default length', 'How long generated outputs should be.', 'set-length', LENGTHS, s.defaultLength) +
         segField('Default format', 'How outputs are structured.', 'set-format', FORMATS, s.defaultFormat);
 
       const togglesInner =
         toggleRow('rememberStyle', 'Remember My Writing Style',
-          'TYPE X keeps your saved styles ready in the Workspace.', s.rememberStyle) +
+          'CLINT X keeps your saved styles ready in the Workspace.', s.rememberStyle) +
         toggleRow('previewBeforeAction', 'Preview Before Action',
           'Always show the output before typing or sending.', s.previewBeforeAction) +
         toggleRow('requireApproval', 'Require Approval For External Actions',
-          'Nothing leaves TYPE X without your approval.', s.requireApproval) +
+          'Nothing leaves CLINT X without your approval.', s.requireApproval) +
         toggleRow('saveHistory', 'Save Task History',
           'Keep a log of tasks in History.', s.saveHistory) +
         toggleRow('showIntro', 'Show Cinematic Intro',
@@ -97,14 +97,14 @@
 
       const keyboardInner =
         '<div class="set-row"><div><div class="t"><span class="kbd">Ctrl</span> + <span class="kbd">Enter</span></div>' +
-        '<div class="d">Run TYPE X on the current task.</div></div></div>' +
+        '<div class="d">Run CLINT X on the current task.</div></div></div>' +
         '<div class="set-row"><div><div class="t"><span class="kbd">Esc</span></div>' +
         '<div class="d">Close open dialogs.</div></div></div>' +
-        '<p class="hint" style="margin:12px 0 0">TYPE X is keyboard-first. No microphone, no voice features — by design.</p>';
+        '<p class="hint" style="margin:12px 0 0">CLINT X is keyboard-first. No microphone, no voice features — by design.</p>';
 
       const connectionsInner =
         '<div class="set-row"><div><div class="t">Connected platforms</div>' +
-        '<div class="d">Where TYPE X can type or send with your approval.</div></div>' +
+        '<div class="d">Where CLINT X can type or send with your approval.</div></div>' +
         '<a class="btn btn-ghost btn-sm" href="#/app/connections">Manage connections</a></div>';
 
       const securityInner =
@@ -114,7 +114,7 @@
         '<div class="set-row"><div><div class="t">Active sessions</div>' +
         '<div class="d">This browser — current.</div></div></div>' +
         '<div class="set-row"><div><div class="t">Security &amp; Privacy</div>' +
-        '<div class="d">How TYPE X protects your data.</div></div>' +
+        '<div class="d">How CLINT X protects your data.</div></div>' +
         '<a class="btn btn-ghost btn-sm" href="#/security">Security &amp; Privacy</a></div>';
 
       const dangerInner =
@@ -122,10 +122,10 @@
         '<div class="d">Removes all entries from History. This cannot be undone.</div></div>' +
         '<button class="btn btn-danger btn-sm" id="set-clear-history">Clear task history</button></div>' +
         '<div class="set-row"><div><div class="t">Delete account</div>' +
-        '<div class="d">Wipes all local TYPE X data and returns to the start.</div></div>' +
+        '<div class="d">Wipes all local CLINT X data and returns to the start.</div></div>' +
         '<button class="btn btn-danger btn-sm" id="set-delete-account">Delete account</button></div>';
 
-      return T.ui.pageHead('Settings', 'Make TYPE X yours.', null) +
+      return T.ui.pageHead('Settings', 'Make CLINT X yours.', null) +
         '<div style="display:grid;gap:16px;max-width:760px">' +
         card('Account', 'user', accountInner) +
         card('AI Preferences', 'cpu', aiInner) +
@@ -198,7 +198,7 @@
         const close = T.ui.modal({
           title: 'Delete account',
           body: '<p style="color:var(--muted);font-size:14px;margin:0 0 12px">' +
-            'This wipes all local TYPE X data — settings, styles, templates, history. ' +
+            'This wipes all local CLINT X data — settings, styles, templates, history. ' +
             'Type <strong>DELETE</strong> below to confirm.</p>' +
             '<div class="field"><label class="label">Type DELETE to confirm</label>' +
             '<input id="del-type" class="input" placeholder="DELETE" autocomplete="off"></div>',

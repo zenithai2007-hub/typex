@@ -1,4 +1,4 @@
-/* TYPE X — Help page.
+/* CLINT X — Help page.
    FAQ accordion, keyboard shortcuts, and a support contact card.
    Static content only; the support form is a v1-demo modal.
    New FAQ entries go in the FAQS array below — keep answers short,
@@ -10,24 +10,24 @@
      New FAQ entries go in the FAQS array below — keep answers short,
      factual, and free of invented features (v1 = local only). */
   const FAQS = [
-    ['What is TYPE X?',
+    ['What is CLINT X?',
      'A universal AI typing and execution agent: you describe the task with your keyboard, ' +
-     'TYPE X understands it, generates the output in your style, and — with your approval — ' +
+     'CLINT X understands it, generates the output in your style, and — with your approval — ' +
      'helps place it where it needs to go.'],
     ['How is this different from a chatbot?',
-     'Chatbots optimize for conversation. TYPE X optimizes for output: the workspace is built ' +
+     'Chatbots optimize for conversation. CLINT X optimizes for output: the workspace is built ' +
      'around the result, with edit, copy, and type actions front and center.'],
     ['What does approval do?',
      'With "Require Approval Before External Actions" on, nothing is typed or sent until you ' +
      'review and approve it. You always see the output first.'],
     ['What is Assisted Mode?',
-     'For platforms that restrict automation, TYPE X prepares everything and you ' +
+     'For platforms that restrict automation, CLINT X prepares everything and you ' +
      'confirm or complete the final step. No rules are bypassed.'],
     ['Which languages are supported?',
      'English, Urdu, and Roman Urdu are fully supported in v1, with more languages coming in Phase 2.'],
     ['Is there voice input?',
-     'No — TYPE X is keyboard-first by design. There is no microphone or voice input.'],
-    ['Can I use TYPE X on another device?',
+     'No — CLINT X is keyboard-first by design. There is no microphone or voice input.'],
+    ['Can I use CLINT X on another device?',
      'v1 keeps everything in this browser, so your data does not carry over. ' +
      'Phase 2 adds cloud sync and real auth.'],
     ['What is real in v1 vs Phase 2?',
@@ -80,21 +80,21 @@
         '<button class="btn btn-ghost btn-sm" id="faq-yes">Yes</button>' +
         '<button class="btn btn-ghost btn-sm" id="faq-no">Not really</button></div></div>';
 
-      /* Getting started: the core TYPE X loop in four steps. */
+      /* Getting started: the core CLINT X loop in four steps. */
       const startInner =
         stepRow(1, 'Describe the task',
           'Type what you want in the Workspace input — a draft, a rewrite, a reply, an outreach note.') +
         stepRow(2, 'Pick your style',
           'Apply a saved writing style, a template, or the defaults from Settings to shape the output.') +
         stepRow(3, 'Review the output',
-          'TYPE X generates the result front and center. Edit, regenerate, copy, or shorten it right there.') +
+          'CLINT X generates the result front and center. Edit, regenerate, copy, or shorten it right there.') +
         stepRow(4, 'Approve and place it',
           'With approval on, nothing is typed or sent until you approve. Assisted Mode prepares ' +
           'the rest for restricted platforms.') +
         stepRow(5, 'Find it later in History',
           'Every completed task is logged with its output, so you can reuse or re-run anything.') +
         stepRow(6, 'Automate the repeats',
-          'Tasks you run often can become Automations — TYPE X handles them on your schedule, ' +
+          'Tasks you run often can become Automations — CLINT X handles them on your schedule, ' +
           'still under your approval rules.') +
         '<p class="hint" style="margin:12px 0 0">Tip: ' +
         'set your default tone, language, and length in Settings so most tasks need zero tweaks.</p>';
@@ -102,14 +102,14 @@
       const keysInner =
         '<p style="color:var(--muted);font-size:13px;margin:0 0 6px">Two shortcuts run the ' +
         'whole app. Everything else is a button or a typed instruction.</p>' +
-        shortcutRow(['Ctrl', 'Enter'], 'Run TYPE X on the current task.') +
+        shortcutRow(['Ctrl', 'Enter'], 'Run CLINT X on the current task.') +
         shortcutRow(['Esc'], 'Close the open dialog.') +
-        '<p class="hint" style="margin:12px 0 0">TYPE X is keyboard-first. No microphone, ' +
+        '<p class="hint" style="margin:12px 0 0">CLINT X is keyboard-first. No microphone, ' +
         'no voice features — by design.</p>';
 
       const supportInner =
         '<p style="color:var(--muted);font-size:14px;margin:0 0 14px">Something broken? ' +
-        'Write to ' + T.esc('support@typex.example') + ' — or use the button below ' +
+        'Write to ' + T.esc('support@clintx.example') + ' — or use the button below ' +
         'and your message is noted for the team.</p>' +
         '<button class="btn btn-ai btn-sm" id="help-contact">Contact Support</button>';
 
@@ -139,10 +139,10 @@
           'Enable "Show Cinematic Intro" in Settings. It also plays only after your first visit.') +
         issueRow('Shortcuts do nothing',
           'Click inside the page first so the app has keyboard focus — shortcuts only work ' +
-          'while the TYPE X window is active.') +
+          'while the CLINT X window is active.') +
         issueRow('Support message did not seem to send',
           'In the v1 demo your message is only noted locally; write directly to ' +
-          'support@typex.example for a real reply.');
+          'support@clintx.example for a real reply.');
 
       /* Privacy in one place — v1 keeps everything on this device. */
       const privacyInner =
@@ -179,7 +179,7 @@
         const close = T.ui.modal({
           title: 'Contact Support',
           body: '<p style="color:var(--muted);font-size:14px;margin:0 0 12px">Describe the issue ' +
-            'and we will get back to you from ' + T.esc('support@typex.example') + '.</p>' +
+            'and we will get back to you from ' + T.esc('support@clintx.example') + '.</p>' +
             '<div class="field"><label class="label">Your message</label>' +
             '<textarea id="sup-msg" class="textarea" rows="5" ' +
             'placeholder="What is not working?"></textarea></div>',
@@ -189,7 +189,7 @@
               const v = ((document.getElementById('sup-msg') || {}).value || '').trim();
               if (!v){ T.ui.toast('Write a message first.', 'error'); return; }
               close();
-              T.ui.toast('Message noted (v1 demo). We\'ll reply from support@typex.example.');
+              T.ui.toast('Message noted (v1 demo). We\'ll reply from support@clintx.example.');
             } }
           ]
         });

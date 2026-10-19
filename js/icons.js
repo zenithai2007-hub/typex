@@ -1,4 +1,4 @@
-/* TYPE X — inline SVG icon library. Usage: TypeX.icon('send','ic-lg') */
+/* CLINT X — inline SVG icon library. Usage: TypeX.icon('send','ic-lg') */
 (function(){
   const P = {
     'x':'<path d="M18 6 6 18M6 6l12 12"/>',
@@ -72,9 +72,9 @@
       '<path d="M19 15 32 30.5 45 15 52 15 37.5 32 52 49 45 49 32 33.5 19 49 12 49 26.5 32 12 15Z" fill="url(#txg'+size+')"/></svg>';
   }
   function brandImg(size){
-    // Official TYPE X wordmark in a clean white badge (dark-theme safe).
+    // Official CLINT X wordmark in a clean white badge (dark-theme safe).
     // size: sm | md | lg | xl
-    return '<span class="brand-badge b-' + (size||'md') + '"><img src="assets/logo.png" alt="TYPE X" draggable="false"></span>';
+    return '<span class="brand-badge b-' + (size||'md') + '"><img src="assets/clintx-logo.png" alt="CLINT X" draggable="false"></span>';
   }
   window.TypeX.icon = icon;
   window.TypeX.logo = logo;

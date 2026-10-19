@@ -1,7 +1,7 @@
 'use strict';
 
 /* ============================================================================
-   TYPE X — shared respond.io API v2 helpers for the serverless api/ endpoints.
+   CLINT X — shared respond.io API v2 helpers for the serverless api/ endpoints.
 
    Verified shapes (2026-10-19) against respond.io API v2 integration docs:
      POST /v2/contacts   { name?, phoneNumber } | { channelId, phoneNumber }

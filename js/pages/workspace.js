@@ -1,4 +1,4 @@
-/* TYPE X — Workspace page: instruction input + context + dominant output panel + style engine + agent. */
+/* CLINT X — Workspace page: instruction input + context + dominant output panel + style engine + agent. */
 (function(){
   const T = window.TypeX;
 
@@ -37,13 +37,13 @@
       <!-- LEFT column -->
       <div class="ws-col">
         <div class="card panel">
-          <div class="panel-head"><h2>${T.icon('spark','ic-sm')} What do you want Type X to do?</h2></div>
-          <textarea id="ws-input" class="textarea" rows="5" placeholder="Tell Type X what you want…"></textarea>
+          <div class="panel-head"><h2>${T.icon('spark','ic-sm')} What do you want Clint X to do?</h2></div>
+          <textarea id="ws-input" class="textarea" rows="5" placeholder="Tell Clint X what you want…"></textarea>
           <div class="examples" style="margin-top:10px">
             ${EXAMPLES.map(e => '<button class="example" data-ex="' + T.esc(e) + '">' + T.esc(e) + '</button>').join('')}
           </div>
           <div style="display:grid;gap:8px;margin-top:14px">
-            <button class="btn btn-ai btn-block" id="ws-run">${T.icon('bolt','ic-sm')} RUN TYPE X</button>
+            <button class="btn btn-ai btn-block" id="ws-run">${T.icon('bolt','ic-sm')} RUN CLINT X</button>
             <button class="btn btn-ghost btn-block" id="ws-clear">CLEAR</button>
           </div>
           <p class="hint" style="margin-top:10px"><span class="kbd">Ctrl</span> + <span class="kbd">Enter</span> to run</p>
@@ -80,7 +80,7 @@
       <div class="ws-col">
         <div class="card panel output-panel">
           <div class="panel-head">
-            <h2>${T.icon('bolt','ic-sm')} TYPE X OUTPUT</h2>
+            <h2>${T.icon('bolt','ic-sm')} CLINT X OUTPUT</h2>
             <span class="badge b-o" id="ws-phase" style="display:none">WORKING</span>
           </div>
           <div id="ws-genstatus" class="gen-status" style="display:none"></div>
@@ -88,7 +88,7 @@
             <div class="empty" style="padding:30px">
               <div class="empty-icon">${T.icon('spark','ic-lg')}</div>
               <h3>Your output appears here</h3>
-              <p>Tell TYPE X what to do, then press RUN TYPE X.</p>
+              <p>Tell CLINT X what to do, then press RUN CLINT X.</p>
             </div>
           </div>
           <div class="meta-row" id="ws-meta" style="display:none">
@@ -133,7 +133,7 @@
 
         <div class="card panel">
           <div class="panel-head">
-            <h2>${T.icon('cpu','ic-sm')} TYPE X AGENT</h2>
+            <h2>${T.icon('cpu','ic-sm')} CLINT X AGENT</h2>
             <span class="badge b-g" id="ws-agent-state">READY</span>
           </div>
           <div class="controls-row">
@@ -230,7 +230,7 @@
     out.classList.remove('generating');
     out.innerHTML = '<div class="empty" style="padding:30px"><div class="empty-icon">' +
       T.icon('spark','ic-lg') + '</div><h3>Your output appears here</h3>' +
-      '<p>Tell TYPE X what to do, then press RUN TYPE X.</p></div>';
+      '<p>Tell CLINT X what to do, then press RUN CLINT X.</p></div>';
   }
 
   function updateMeta(text){
@@ -299,7 +299,7 @@
     setStatus('working', 'Working');
     setAgentBadge('running', 'WORKING');
     outputSkeleton();
-    genStatus('<div class="spinner"></div><span>Type X is creating your output…</span>', true);
+    genStatus('<div class="spinner"></div><span>Clint X is creating your output…</span>', true);
 
     T.agent.start('Instruction received');
 
@@ -386,7 +386,7 @@
     qs('#ws-err-retry').addEventListener('click', () => run());
     qs('#ws-err-edit').addEventListener('click', () => { qs('#ws-input').focus(); qs('#ws-input').select(); });
     qs('#ws-err-support').addEventListener('click', () =>
-      T.ui.toast('Support: support@typex.example — include your instruction text', 'info'));
+      T.ui.toast('Support: support@clintx.example — include your instruction text', 'info'));
     T.agent.log('Generation failed: ' + (fe.title || 'error'), 'action');
   }
 

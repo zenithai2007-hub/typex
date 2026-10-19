@@ -1,4 +1,4 @@
-/* TYPE X — hash router + dashboard shell.
+/* CLINT X — hash router + dashboard shell.
    Pages register via: TypeX.pages['workspace'] = { title, render() -> html, mount(root), unmount() }
    Public pages render without the shell. /app/* requires login.
 */
@@ -108,7 +108,7 @@
     let html = '';
     try { html = def.render() || ''; } catch(e){ html = '<div class="empty"><h3>Render error</h3></div>'; }
     view.innerHTML = inShell ? shell(key, html) : html;
-    document.title = (def.title ? def.title + ' — ' : '') + 'TYPE X';
+    document.title = (def.title ? def.title + ' — ' : '') + 'CLINT X';
     const root = document.getElementById('page') || view;
     try { if (def.mount) def.mount(root); } catch(e){ console.error(e); }
     const chip = document.getElementById('profile-chip');

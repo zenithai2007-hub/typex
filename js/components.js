@@ -1,4 +1,4 @@
-/* TYPE X — shared UI components: modal, toast, approval, agent log, misc.
+/* CLINT X — shared UI components: modal, toast, approval, agent log, misc.
    Contract for page modules:
    TypeX.ui.toast(msg, type)                 // type: 'success' | 'error' | 'info'
    TypeX.ui.modal({title, body, actions:[{label,kind,onClick,close}], wide}) -> close()
@@ -87,7 +87,7 @@
     if (!s.requireApproval){ o.onApprove(); return; }
     const body = T.el('<div>' +
       '<p style="color:var(--muted);font-size:14px;margin-bottom:12px">' +
-      T.icon('shield','ic-sm') + ' <b style="color:var(--text)">Type X prepared this action.</b> Review it before anything happens.</p>' +
+      T.icon('shield','ic-sm') + ' <b style="color:var(--text)">Clint X prepared this action.</b> Review it before anything happens.</p>' +
       '<div class="label">' + T.esc(o.previewLabel || 'Action preview') + '</div>' +
       '<div class="output-body" style="min-height:120px;max-height:300px;overflow:auto">' + T.esc(o.output||'') + '</div>' +
       '<p class="hint" style="margin-top:10px">Nothing is sent or typed until you approve. You can edit first, or cancel.</p></div>');
@@ -121,7 +121,7 @@
         ? this.events.slice().reverse().map(e =>
             '<div class="log-row"><span class="log-time">' + T.fmtTime(e.t) + '</span>' +
             '<span class="log-dot' + (e.kind==='action'?' o':'') + '"></span><span>' + T.esc(e.msg) + '</span></div>').join('')
-        : '<div style="color:var(--muted2);font-size:13px;padding:8px 0">No activity yet. Run a task and watch TYPE X work here.</div>';
+        : '<div style="color:var(--muted2);font-size:13px;padding:8px 0">No activity yet. Run a task and watch CLINT X work here.</div>';
       this._targets = this._targets.filter(el => el.isConnected);
       this._targets.forEach(el => { el.innerHTML = html; });
     }

@@ -1,4 +1,4 @@
-/* TYPE X — Output page: every finished generation, ready to reuse.
+/* CLINT X — Output page: every finished generation, ready to reuse.
    Sourced from typex_history entries that carry an output. */
 (function(){
   const T = window.TypeX;

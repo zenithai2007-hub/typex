@@ -1,7 +1,7 @@
 'use strict';
 
 /* ============================================================================
-   TYPE X — real-send: POST /api/send
+   CLINT X — real-send: POST /api/send
    ----------------------------------------------------------------------------
    Vercel serverless endpoint. Sends a message through a provider.
 

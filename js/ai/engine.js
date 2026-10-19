@@ -1,4 +1,4 @@
-/* TYPE X — AI engine: provider selection, streaming, retry, error mapping.
+/* CLINT X — AI engine: provider selection, streaming, retry, error mapping.
    TypeX.ai.generate({ instruction, contextText, style, onToken, onDone, onError }) -> { cancel(), promise }
    TypeX.ai.quick(instruction, styleOverrides) -> Promise<string> (no streaming)
 */
@@ -14,9 +14,9 @@
   function friendlyError(e){
     const m = String((e && e.message) || e || '');
     if (m === 'cancelled') return null; // silent
-    if (m === 'empty') return {title:'Nothing to work with', text:'Type an instruction first — tell TYPE X what you want.'};
+    if (m === 'empty') return {title:'Nothing to work with', text:'Type an instruction first — tell CLINT X what you want.'};
     if (m === 'cloud-unavailable') return {title:'Cloud engine not connected', text:'The Phase-2 cloud backend is not configured yet. The local engine is active instead.'};
-    return {title:"Type X couldn't complete this task.", text:'Something interrupted generation. Your instruction is safe — try again or edit it.'};
+    return {title:"Clint X couldn't complete this task.", text:'Something interrupted generation. Your instruction is safe — try again or edit it.'};
   }
 
   function generate(opts){

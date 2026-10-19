@@ -1,4 +1,4 @@
-/* TYPE X — Outreach Mode page.
+/* CLINT X — Outreach Mode page.
    Personalized, consent-respecting, approval-gated outreach.
    No spam, no CAPTCHA/rate-limit bypass, no platform-rule violations. */
 (function(){
@@ -55,7 +55,7 @@
     if (!leads.length){
       return T.ui.emptyState({
         icon:'users', title:'No leads yet',
-        text:'Add your first lead and TYPE X will help you reach out the right way — personalized, relevant, and always with your approval.',
+        text:'Add your first lead and CLINT X will help you reach out the right way — personalized, relevant, and always with your approval.',
         actionLabel:'+ New Lead', onAction: newLeadModal
       });
     }
@@ -280,9 +280,9 @@
         '<div class="card card-pad compliance-card">' +
           '<div class="comp-head">' + T.icon('shield', 'comp-ic') +
           '<h3>Outreach the right way</h3></div>' +
-          '<p>TYPE X writes personalized messages from real context — never bulk-identical blasts. ' +
+          '<p>CLINT X writes personalized messages from real context — never bulk-identical blasts. ' +
           'It does not bypass CAPTCHAs, rate limits, anti-spam systems, or platform automation rules. ' +
-          'Where automation is restricted, it works in ASSISTED MODE: Type X prepares the action while ' +
+          'Where automation is restricted, it works in ASSISTED MODE: Clint X prepares the action while ' +
           'you confirm and complete it.</p>' +
         '</div>' +
         '<div data-ox="stats"></div>' +
