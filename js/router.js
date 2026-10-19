@@ -47,8 +47,8 @@
       '<a class="bottom-link' + (n.key===activeKey?' active':'') + '" href="#/app/' + n.key + '">' +
       T.icon(n.icon) + '<span>' + n.label + '</span></a>').join('');
     return '<div class="shell">' +
-      '<aside class="sidebar"><a class="brand" href="#/app/workspace">' + T.logo(34) +
-      '<span>TYPE X<small>AI EXECUTION</small></span></a>' +
+      '<aside class="sidebar"><a class="brand brand-side" href="#/app/workspace">' + T.brandImg('md') +
+      '<span class="brand-cap">AI EXECUTION</span></a>' +
       '<div class="side-label">WORKSPACE</div>' + links +
       '<div class="side-foot">' +
       '<a class="side-link' + (activeKey==='help'?' active':'') + '" href="#/app/help">' + T.icon('help') + '<span>Help</span></a>' +
@@ -57,7 +57,7 @@
       T.esc(user.name) + '</div><div style="font-size:11.5px;color:var(--muted2)">' + T.esc(user.plan || 'Free plan') + '</div></div></div>' +
       '</div></aside>' +
       '<div class="mobile-topbar"><a href="#/app/workspace" style="display:flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:700">' +
-      T.logo(28) + 'TYPE X</a><div class="status-pill" style="padding:5px 11px;font-size:11.5px"><span class="status-dot"></span>Ready</div></div>' +
+      T.brandImg('sm') + '</a><div class="status-pill" style="padding:5px 11px;font-size:11.5px"><span class="status-dot"></span>Ready</div></div>' +
       '<main class="main"><div class="page" id="page">' + pageHtml + '</div></main>' +
       '<nav class="bottom-nav">' + mob + '</nav></div>';
   }

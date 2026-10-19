@@ -39,7 +39,7 @@
       renderer.setSize(W, H);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-      const ov = T.el('<div class="intro-overlay"><div class="intro-word"><h1>TYPE X</h1>' +
+      const ov = T.el('<div class="intro-overlay"><div class="intro-word"><span class="brand-badge b-xl intro-logo"><img src="assets/logo.png" alt="TYPE X" draggable="false"></span>' +
         '<p>Tell Type X what to do.</p></div>' +
         '<button class="btn btn-ghost btn-sm skip-intro" style="display:none">Skip intro ' + T.icon('arrow-r','ic-sm') + '</button></div>');
       ov.insertBefore(renderer.domElement, ov.firstChild);
@@ -190,7 +190,7 @@
 
   function quick(onDone){
     const root = document.getElementById('intro-root');
-    const q = T.el('<div class="quick-intro"><div class="qx">' + T.logo(72) + '</div></div>');
+    const q = T.el('<div class="quick-intro"><div class="qx">' + T.brandImg('lg') + '</div></div>');
     root.appendChild(q);
     setTimeout(()=>{ root.innerHTML=''; if (onDone) onDone(); }, 950);
   }

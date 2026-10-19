@@ -7,7 +7,7 @@
       return `
 <nav class="land-nav">
   <div class="land-nav-in">
-    <a href="#/" class="brand">${T.logo(28)}<span>TYPE&nbsp;X</span></a>
+    <a href="#/" class="brand" aria-label="TYPE X home">${T.brandImg('sm')}</a>
     <div class="land-cta">
       <a href="#/" class="btn btn-ghost btn-sm">Back to home</a>
     </div>
@@ -44,7 +44,7 @@
 <footer class="land-footer">
   <div class="land-footer-in">
     <div class="brand-col">
-      <a href="#/" class="brand">${T.logo(24)}<span>TYPE&nbsp;X</span></a>
+      <a href="#/" class="brand" aria-label="TYPE X home">${T.brandImg('sm')}</a>
       <p class="tagline">Your AI that types, creates &amp; gets things done.</p>
     </div>
     <div class="cols">

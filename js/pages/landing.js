@@ -9,7 +9,7 @@
       return `
 <nav class="land-nav">
   <div class="land-nav-in">
-    <a href="#/" class="brand">${T.logo(28)}<span>TYPE&nbsp;X</span></a>
+    <a href="#/" class="brand" aria-label="TYPE X home">${T.brandImg('sm')}</a>
     <div class="land-links">
       <a href="#product">Product</a>
       <a href="#how">How It Works</a>
@@ -186,7 +186,7 @@
 <footer class="land-footer">
   <div class="land-footer-in">
     <div class="brand-col">
-      <a href="#/" class="brand">${T.logo(24)}<span>TYPE&nbsp;X</span></a>
+      <a href="#/" class="brand" aria-label="TYPE X home">${T.brandImg('sm')}</a>
       <p class="tagline">Your AI that types, creates &amp; gets things done.</p>
     </div>
     <div class="cols">

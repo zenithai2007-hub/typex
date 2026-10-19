@@ -17,7 +17,7 @@
       return `
 <div class="auth-wrap">
   <div class="auth-card card">
-    <a href="#/" class="brand">${T.logo(36)}<span>TYPE&nbsp;X</span></a>
+    <a href="#/" class="brand brand-center" aria-label="TYPE X home">${T.brandImg('md')}</a>
     <h1>Log in to TYPE X</h1>
     <p class="sub">Welcome back. Your words are waiting.</p>
     <form id="login-form">
@@ -59,7 +59,7 @@
       return `
 <div class="auth-wrap">
   <div class="auth-card card">
-    <a href="#/" class="brand">${T.logo(36)}<span>TYPE&nbsp;X</span></a>
+    <a href="#/" class="brand brand-center" aria-label="TYPE X home">${T.brandImg('md')}</a>
     <h1>Create your TYPE X account</h1>
     <p class="sub">Start typing. Type X does the rest.</p>
     <div class="auth-alt" style="margin-top:0">Already have an account? <a href="#/login">Log in</a></div>
