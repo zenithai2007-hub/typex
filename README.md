@@ -81,8 +81,43 @@ POST /api/send   Content-Type: application/json
 
 - API shapes follow public respond.io API v2 integration guides; verify
   against https://docs.respond.io during the first live test — endpoint
-  paths are isolated in `RIO_API` at the top of `api/send.js`.
+  paths are isolated in `api/_rio.js` (shared by both endpoints).
 - WhatsApp Business rules apply: the first message to a contact outside the
   24h window must use an approved template — handle in the UI wiring step.
 - No key input fields were added to the UI on purpose; the key lives only in
   Vercel env vars.
+
+## Agent Mode (`#/agent`) — conversation loop
+
+One instruction → the agent runs the whole loop: send → wait → on reply,
+generate a contextual reply (on-device AI, fed the conversation history) →
+approval card or auto-send → repeat.
+
+- **Instruction bar** (keypad-styled): instruction + contact name + phone +
+  channel (WhatsApp; more later) + START AGENT.
+- **Reply mode**: "Har reply se pehle approval lo" (default ON) vs Auto mode
+  (clear warning label; sends without asking).
+- **Live thread**: sent/received bubbles; **activity log**: timestamped lines
+  with PAUSE / RESUME / STOP (agent never acts while paused/stopped).
+- **Approval cards**: "Type X prepared this reply." + exact text +
+  APPROVE & SEND / EDIT / SKIP.
+
+**Polling architecture (v1, honest)**: client-side `setInterval` every 15s
+calls the new endpoint below while the Agent tab is open. Server-side
+cron/webhooks come later.
+
+```http
+GET /api/replies?contactId=<id>&since=<ms-epoch>&limit=20
+GET /api/replies?to=<phone-digits>&since=<ISO>   (contact resolved by phone)
+
+→ 200 { ok:true, contactId, conversationId, checkedAt,
+        messages:[ { id, dir:"in"|"out", text, at } ] }   // dir:"in" = from contact
+→ 4xx/5xx { ok:false, code:"not_configured"|"contact_not_found"|"channel_not_connected"|..., message:"..." }
+```
+
+- `since` filters server-side; the page additionally dedupes by message id.
+- Conversation/message field shapes are normalized defensively
+  (`normMessage` in `api/_rio.js`) — log one raw response on the first live
+  test and tighten the mapping if needed.
+- Without `RESPONDIO_API_KEY` the page shows a Roman-Urdu setup banner
+  (connect WhatsApp in respond.io → set the env var → redeploy → START).

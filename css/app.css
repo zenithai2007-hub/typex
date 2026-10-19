@@ -492,3 +492,39 @@ canvas.chart{width:100%;height:210px}
   .land-links{display:none}
 }
 .hero{display:block}
+
+/* ---------- Agent Mode ---------- */
+.agent-bar{background:rgba(124,58,237,.06);border:1px solid rgba(168,85,247,.25);border-radius:16px;
+  padding:18px;box-shadow:0 0 0 1px rgba(124,58,237,.08),0 12px 40px rgba(0,0,0,.35)}
+.agent-cmd{width:100%;font-size:15.5px;line-height:1.6;border-radius:14px;
+  border:1.5px solid rgba(255,122,24,.4);background:rgba(11,7,20,.85)}
+.agent-cmd:focus{border-color:var(--orange-b);box-shadow:0 0 0 3px rgba(255,122,24,.16)}
+.agent-targets{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px}
+@media(max-width:720px){.agent-targets{grid-template-columns:1fr}}
+.agent-modes{margin-top:14px}
+.hint.warn{color:#ffb066;display:flex;align-items:flex-start;gap:8px}
+.hint.warn .ic{flex:none;margin-top:1px}
+.chat-thread{max-height:460px;overflow-y:auto;padding:6px 2px;display:flex;flex-direction:column;gap:10px}
+.bubble-row{display:flex}
+.bubble-row.sent{justify-content:flex-end}
+.bubble-row.recv{justify-content:flex-start}
+.bubble{max-width:78%;padding:11px 15px;border-radius:16px;font-size:14.5px;line-height:1.55;
+  white-space:pre-wrap;word-break:break-word}
+.bubble-row.sent .bubble{background:linear-gradient(135deg,var(--orange),#e85d04);color:#fff;
+  border-bottom-right-radius:6px;box-shadow:0 6px 22px rgba(255,122,24,.28)}
+.bubble-row.recv .bubble{background:rgba(124,58,237,.16);border:1px solid rgba(168,85,247,.35);color:var(--text);
+  border-bottom-left-radius:6px}
+.bubble-time{font-size:10.5px;opacity:.75;margin-top:5px;text-align:right}
+.bubble-notice{align-self:center;font-size:12.5px;color:var(--muted2);background:rgba(255,255,255,.04);
+  border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+.approval-card{border:1.5px solid rgba(255,122,24,.5);border-radius:14px;padding:14px 16px;
+  background:rgba(255,122,24,.05);box-shadow:0 0 24px rgba(255,122,24,.12)}
+.ap-head{display:flex;align-items:center;gap:8px;font-size:13.5px;margin-bottom:10px;color:var(--text)}
+.ap-head .ic{color:var(--orange-b)}
+.ap-tag{margin-left:auto;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:#ffb066;background:var(--orange-dim);border:1px solid rgba(255,122,24,.4);
+  border-radius:999px;padding:3px 10px}
+.ap-text{font-size:14.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;
+  background:rgba(11,7,20,.7);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.ap-edit{margin-top:10px;width:100%}
+@media(max-width:720px){.bubble{max-width:88%}}

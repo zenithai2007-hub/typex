@@ -14,6 +14,7 @@
     {key:'templates', label:'Templates', icon:'template'},
     {key:'styles', label:'Saved Styles', icon:'style'},
     {key:'outreach', label:'Outreach', icon:'send'},
+    {key:'agent', label:'Agent Mode', icon:'cpu'},
     {key:'connections', label:'Connections', icon:'plug'},
     {key:'automations', label:'Automations', icon:'bolt'},
     {key:'analytics', label:'Analytics', icon:'chart'},
@@ -24,6 +25,7 @@
     {key:'history', label:'Tasks', icon:'list'},
     {key:'output', label:'Output', icon:'output'},
     {key:'outreach', label:'Outreach', icon:'send'},
+    {key:'agent', label:'Agent', icon:'cpu'},
     {key:'settings', label:'Settings', icon:'gear'}
   ];
   const PUBLIC = { '':'landing', 'security':'security', 'login':'auth-login', 'signup':'auth-signup' };
